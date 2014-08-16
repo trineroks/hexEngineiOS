@@ -689,7 +689,8 @@ void CEnvironment::showActionMenu(bool canAttack, int x, int y)
 	endTurnButton_->setActionToDo(ACTION_CANCEL);
 	endTurnButton_->setLabel("Cancel");
 	actionMenu_ = new CActionMenu(csdl_setup, actionMenuAssets_, x, y, ACTION_MENU_WIDTH);
-	actionMenu_->addElement("Disband", ACTION_DISBAND);
+	//actionMenu_->addElement("Disband", ACTION_DISBAND);
+    actionMenu_->addElement("Cancel", ACTION_CANCEL);
 	if (currentlySelectedUnit_->didMoveThisTurn())
 		actionMenu_->addElement("Stay", ACTION_STAY);
 }
