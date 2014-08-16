@@ -728,14 +728,16 @@ void CEnvironment::checkForCombatState()
 			defenderHex_->getUnit()->deleteFloater();
 		attackerHex_ = NULL;
 		defenderHex_ = NULL;
-		unselectCurrentlySelectedUnit(); //wrapper function that deselects and nullifies the current unit pointer
 	}
 }
 
 void CEnvironment::update(float camX, float camY)
 {
 	if (isInCombat_)
+    {
+        unselectCurrentlySelectedUnit(); //wrapper function that deselects and nullifies the current unit pointer
 		checkForCombatState();
+    }
 	//defining the context to draw on
 	csdl_setup->useFullscreen();
 	draw(camX, camY);

@@ -382,6 +382,7 @@ void CUnit::getMovableTiles()
 		for (int i=0; i<6; i++)
 		{
 			skip = false;
+            ZOC = false;
 			if (adjacent[i].x == position_.x && adjacent[i].y == position_.y)
 				skip = true;
 			if (gameEnvironment_->getHex(adjacent[i].x, adjacent[i].y)->isFogged()) //if the tile is fogged, don't add it into the movelist
@@ -393,14 +394,28 @@ void CUnit::getMovableTiles()
 					if ((j)->x == adjacent[i].x && (j)->y == adjacent[i].y)
 					{
 						if (openSteps_[k].cost - gameEnvironment_->getMoveCost(adjacent[i].x, adjacent[i].y, unitType_) > (j)->cost)
-							(j)->cost = openSteps_[k].cost - gameEnvironment_->getMoveCost(adjacent[i].x, adjacent[i].y, unitType_);
+                        {
+                            insert.x = adjacent[i].x;
+                            insert.y = adjacent[i].y;
+                            gamePoint testEnemyAdjacent[6];
+                            gameEnvironment_->getAdjacentHexes(adjacent[i].x, adjacent[i].y, testEnemyAdjacent);
+                            for (int y=0; y<6; y++)
+                            {
+                                if (gameEnvironment_->anyEnemyOnTile(testEnemyAdjacent[y].x, testEnemyAdjacent[y].y, owner_) != NULL)
+                                {
+                                    skip = true;
+                                    break;
+                                }
+                            }
+                            if (!skip)
+                                (j)->cost = openSteps_[k].cost - gameEnvironment_->getMoveCost(adjacent[i].x, adjacent[i].y, unitType_);
+                        }
 						skip = true;
 						break;
 					}
 				}
 				if (gameEnvironment_->traversable(adjacent[i].x, adjacent[i].y, openSteps_[k].cost, unitType_, owner_) && !skip)
 				{
-					ZOC = false;
 					insert.x = adjacent[i].x;
 					insert.y = adjacent[i].y;
 					gamePoint testEnemyAdjacent[6];
