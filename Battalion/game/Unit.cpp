@@ -651,12 +651,18 @@ int CUnit::attackerInRangeForRetaliation(CUnit* attacker)
 	for (vector<gamePoint>::const_iterator i = validAttackTiles_.begin(); i != validAttackTiles_.end(); i++)
 	{
 		if (gameEnvironment_->getHex((i)->x, (i)->y)->getUnit() == attacker)
+        {
+            hideUnitActionTiles();
 			return WEAPON_PRIMARY;
+        }
 	}
 	for (vector<gamePoint>::const_iterator i = validSupportTiles_.begin(); i != validSupportTiles_.end(); i++)
 	{
 		if (gameEnvironment_->getHex((i)->x, (i)->y)->getUnit() == attacker)
+        {
+            hideUnitActionTiles();
 			return WEAPON_SUPPORT;
+        }
 	}
 	return NONE;
 }

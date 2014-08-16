@@ -729,6 +729,7 @@ void CEnvironment::checkForCombatState()
 			defenderHex_->getUnit()->deleteFloater();
 		attackerHex_ = NULL;
 		defenderHex_ = NULL;
+        displayDefog();
 	}
 }
 
