@@ -890,13 +890,13 @@ void CEnvironment::doCombat(CTileData *attackerHex, CTileData *defenderHex, int 
 
 	damage = attackerHex->getUnit()->calculateRawDamage(weaponSelected); //Ammo consumption is calculated in CUnit's calculateRawDamage function
 	defenderHex->getUnit()->prepareDamageFloater(damage);
-	attackerHex->getUnit()->startCombatAnimation();
 
 	if (retaliationWeapon != NONE) //The attacker attacks back when a unit is within range of one of their weapons systems that can fire after move
 	{
 		retaliateDamage = defenderHex->getUnit()->calculateRawDamage(retaliationWeapon);
 		defenderHex->getUnit()->startCombatAnimation();
 	}
+    attackerHex->getUnit()->startCombatAnimation();
 	attackerHex->getUnit()->prepareDamageFloater(retaliateDamage);
 	defenderHex->getUnit()->decrementHP(damage);
 	attackerHex->getUnit()->decrementHP(retaliateDamage);

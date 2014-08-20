@@ -145,6 +145,7 @@ void CUnit::doCancel()
 {
 	moveTo(previousPos_.x, previousPos_.y);
 	movedThisTurn_ = false;
+    //hideUnitActionTiles();
 }
 
 void CUnit::moveTo(int x, int y)
