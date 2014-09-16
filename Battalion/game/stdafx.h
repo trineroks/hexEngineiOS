@@ -1,5 +1,7 @@
 #pragma once
 
+#include "assert.h"
+
 #include <iostream>
 #include <stdio.h>
 #include "SDL.h"

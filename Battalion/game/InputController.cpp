@@ -111,8 +111,8 @@ bool CInputController::withinGameWorld(int mouseX, int mouseY)
 
 bool CInputController::tapSelected(int mouseX, int mouseY)
 {
-//	if (!withinGameWorld(mouseX, mouseY))
-//		return false;
+	if (!withinGameWorld(mouseX, mouseY))
+		return false;
 	if (abs(mouseX - selectMouseX) < 5 && abs(mouseY - selectMouseY) < 5)
 		return true;
 	return false;

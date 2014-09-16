@@ -139,75 +139,77 @@ CEnvironment::CEnvironment(int *board, int playerNum, int p_boardW, int p_boardH
     CWeapon *artillerysupport = new CWeapon(10, 20, 1, false, 0, true, false, false, ".50 HMG", false, 20, 0, true, true);
 
 	gamePoint Upos;
-	Upos.x = 10;
+
+	Upos.x = 7;
 	Upos.y = 9;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(0, "US Riflemen", 6, 2, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
-	Upos.x = 9;
+	Upos.x = 6;
 	Upos.y = 10;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(0, "US Riflemen", 6, 2, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
-	Upos.x = 9;
+	Upos.x = 6;
 	Upos.y = 9;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(0, "US Riflemen", 6, 2, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
-    Upos.x = 10;
+    Upos.x = 7;
 	Upos.y = 10;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(0, "M1A2 Abrams", 8, 2, 100, 4, 0, 0, tankprimary, nothing, Upos, csdl_setup, units, this));
-    Upos.x = 11;
+    Upos.x = 8;
 	Upos.y = 10;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(0, "M1A2 Abrams", 8, 2, 100, 4, 0, 0, tankprimary, nothing, Upos, csdl_setup, units, this));
-    Upos.x = 10;
+    Upos.x = 7;
 	Upos.y = 11;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(0, "M1A2 Abrams", 8, 2, 100, 4, 0, 0, tankprimary, nothing, Upos, csdl_setup, units, this));
-    Upos.x = 11;
+    Upos.x = 8;
 	Upos.y = 11;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(0, "Paladin", 6, 2, 100, 4, 0, 1, artilleryprimary, artillerysupport, Upos, csdl_setup, units, this));
-    Upos.x = 9;
+    Upos.x = 6;
 	Upos.y = 11;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CAircraft(0, "AH-64 Apache", 9, 4, 100, 4, 0, gunshipprimary, gunshipsupport, Upos, csdl_setup, units, this));
-    Upos.x = 11;
+    Upos.x = 8;
 	Upos.y = 8;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CAircraft(0, "AH-64 Apache", 9, 4, 100, 4, 0, gunshipprimary, gunshipsupport, Upos, csdl_setup, units, this));
     
-    Upos.x = 3;
+    Upos.x = 6;
 	Upos.y = 4;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(1, "Soviet Riflemen", 6, 2, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
-	Upos.x = 4;
+	Upos.x = 7;
 	Upos.y = 4;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(1, "Soviet Riflemen", 6, 2, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
-	Upos.x = 4;
+	Upos.x = 7;
 	Upos.y = 3;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(1, "Soviet Riflemen", 6, 2, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
-    Upos.x = 3;
+    Upos.x = 6;
 	Upos.y = 3;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(1, "T-90A", 8, 2, 100, 4, 0, 0, tankprimary, nothing, Upos, csdl_setup, units, this));
-    Upos.x = 3;
+    Upos.x = 6;
 	Upos.y = 2;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(1, "T-90A", 8, 2, 100, 4, 0, 0, tankprimary, nothing, Upos, csdl_setup, units, this));
-    Upos.x = 2;
+    Upos.x = 5;
 	Upos.y = 3;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(1, "T-90A", 8, 2, 100, 4, 0, 0, tankprimary, nothing, Upos, csdl_setup, units, this));
-    Upos.x = 2;
+    Upos.x = 5;
 	Upos.y = 2;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CVehicle(1, "MSTA", 6, 2, 100, 4, 0, 1, artilleryprimary, artillerysupport, Upos, csdl_setup, units, this));
-    Upos.x = 2;
+    Upos.x = 5;
 	Upos.y = 5;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CAircraft(1, "Ka-50 Akula", 9, 4, 100, 4, 0, gunshipprimary, gunshipsupport, Upos, csdl_setup, units, this));
-    Upos.x = 4;
+    Upos.x = 7;
 	Upos.y = 2;
 	hexes_[Upos.x + width*Upos.y].setUnit(new CAircraft(1, "Ka-50 Akula", 9, 4, 100, 4, 0, gunshipprimary, gunshipsupport, Upos, csdl_setup, units, this));
+	//int increment = 0;
     
-
-	/*
-	int increment = 0;
+    /*
+    
 	for (int i=1; i<height-2; i++)
 	{
 		for (int k=1; k<width-2; k++)
 		{
 			Upos.x = k;
 			Upos.y = i;
-			hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(0, "US Riflemen", 6, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
+			hexes_[Upos.x + width*Upos.y].setUnit(new CInfantry(0, "US Riflemen", 6, 3, 100, 4, 0, primary, support, Upos, csdl_setup, units, this));
 		}
 	}
-	*/
+    
+     */
 
 	endTurnButton_ = new CGUI(csdl_setup, csdl_setup->getWidth()-150, csdl_setup->getHeight()-75, 150, 75, onScreenButtonAssets_, 1, 2, "End Turn", ACTION_ENDTURN);
 

@@ -212,6 +212,7 @@ void CUnit::activate()
 {
 	movedThisTurn_ = false;
 	attackedThisTurn_ = false;
+    hideUnitActionTiles();
 	//setDefog();
 }
 
@@ -665,6 +666,7 @@ int CUnit::attackerInRangeForRetaliation(CUnit* attacker)
 			return WEAPON_SUPPORT;
         }
 	}
+    hideUnitActionTiles();
 	return NONE;
 }
 

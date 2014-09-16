@@ -29,6 +29,8 @@ CSDL_Setup::CSDL_Setup(bool exit, int p_screenW, int p_screenH)
     
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
+    SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 0);
+    //SDL_GL_SetAttribute(SDL_GL_RETAINED_BACKING, 1);
 
 	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0)
         printf("Cannot initialize SDL!: %s\n", SDL_GetError());
@@ -45,11 +47,14 @@ CSDL_Setup::CSDL_Setup(bool exit, int p_screenW, int p_screenH)
 	screenH = p_screenH;
 	window = NULL;
 	//window = SDL_CreateWindow("triN@TE Industries", 0, 0, screenW, screenH, SDL_WINDOW_SHOWN); For Windows
-    window = SDL_CreateWindow(NULL, 0, 0, screenW, screenH, SDL_WINDOW_OPENGL);
+    window = SDL_CreateWindow(NULL, 0, 0, screenW, screenH, SDL_WINDOW_OPENGL | SDL_WINDOW_BORDERLESS);
+    SDL_GLContext context = SDL_GL_CreateContext(window);
+    if (context == 0)
+        printf("Context could not be set!\n");
     
 	renderer = NULL;
     
-	//renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED); For Windows
+	//renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED); //For Windows
     renderer = SDL_CreateRenderer(window, -1, 0);
 
 	gameWorld.x = 0;

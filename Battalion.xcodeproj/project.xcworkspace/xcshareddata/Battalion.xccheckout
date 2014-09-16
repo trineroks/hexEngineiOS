@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>716C58D0-55BA-4660-AAE1-D75DDAAE0002</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Battalion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D7651728-7E33-4FED-A488-12BBB84F2A86</key>
+		<string>ssh://github.com/trineroks/hexEngineiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Battalion.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D7651728-7E33-4FED-A488-12BBB84F2A86</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/trineroks/hexEngineiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D7651728-7E33-4FED-A488-12BBB84F2A86</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D7651728-7E33-4FED-A488-12BBB84F2A86</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Battalion2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
